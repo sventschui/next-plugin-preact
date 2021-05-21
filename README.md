@@ -24,3 +24,23 @@ module.exports = withPreact({
     /* regular next.js config options here */
 });
 ```
+
+## Custom jsx-transform
+
+If you want to use the new `jsx` transform in Next.JS with Preact you'll have to add this to your `babel` config.
+
+```js
+{
+  "presets": [
+    [
+      "next/babel",
+      {
+        "preset-react": {
+          "runtime": "automatic",
+          "importSource": "react"
+        }
+      }
+    ]
+  ]
+}
+``` 
